@@ -1,0 +1,123 @@
+/*
+	* MOBILE
+*/
+:root {
+	--color-white: #FFFFFF;
+	--color-gray-001: #F5F5F5;
+	--color-gray-002: #EDEDED;
+	--color-gray-003: #B2B2B2;
+	--color-gray-004: #CACACA;
+	--color-gray-005: #898989;
+	--color-black: #000000;
+	--color-primary: #CC1F36;
+	--color-secondary: #247294;
+	--color-tertiary: #D86123;
+
+	/* Breakpoints */
+	--breakpoint-mobile: 516px;
+	--breakpoint-tablet: 768px;
+	--breakpoint-laptop: 1024px;
+	--breakpoint-desktop: 1280px;
+	--breakpoint-tv: 1920px;
+
+	/* Typography */
+	--primary-font-family: 'Jost', Helvetica, Arial, sans-serif;
+	--font-family: var(--primary-font-family);
+
+	--base-font-size: 16px; 
+	--base-line-height: 1.25; 
+	--base-font-weight: 400;
+	--h1-font-size: 1.75rem;
+	--h1-line-height: 1.25;
+	--h1-font-weight: 800;
+	--h2-font-size: 1.375rem;
+	--h2-line-height: 1.25;
+	--h2-font-weight: 800;
+	--h3-font-size: 1.25rem;
+	--h3-line-height: 1.25;
+	--h3-font-weight: 600;
+	--h4-font-size: 1.125rem;
+	--h4-line-height: 1.25;
+	--h4-font-weight: 400;
+	--h5-font-size: 1rem;
+	--h5-line-height: 1.25;
+	--h5-font-weight: 400;
+	--h6-font-size: 0.75rem;
+	--h6-line-height: 1.25;
+	--h6-font-weight: 400;
+	--body-font-size: 1em;
+	--body-line-height: 1.25;
+	--body-font-weight: 400;
+	--small-font-size: 0.8rem;
+	--small-line-height: 1.25;
+	--small-font-weight: 400;
+	--tiny-font-size: 0.675rem;
+	--tiny-line-height: 1.25;
+	--tiny-font-weight: 400;
+
+	/* Spacing */
+	--gap: 10px;
+
+	/* Animation */
+	--animation-speed: 0.25s;
+
+	/* Theme */
+	/* shadows */
+	--shadow: 1px 1px 4px #00000029;
+	/* background */
+	--primary-bgcolor: var(--color-black);
+	--secondary-bgcolor: var(--color-black);
+	--tertiary-bgcolor: var(--color-gray-001);
+	--placeholder-bgcolor: var(--color-gray-003);
+	/* text */
+	--primary-textcolor: var(--color-white);
+	--secondary-textcolor: var(--color-white);
+	--tertiary-textcolor: var(--color-gray-005);
+	/* border */
+	--primary-bordercolor: var(--color-gray-004);
+	--secondary-bordercolor: var(--color-gray-002);
+	/* buttons */
+	/* primary - regular */
+	--primary-button-bgcolor: var(--color-gray-001);
+	--primary-button-textcolor: var(--color-red);
+	--primary-button-hover-bgcolor: var(--primary-button-textcolor);
+	--primary-button-hover-textcolor: var(--primary-button-bgcolor);
+	--primary-button-active-bgcolor: var(--primary-button-hover-bgcolor);
+	--primary-button-active-textcolor: var(--primary-button-hover-textcolor);
+	/* primary - invert */
+	--primary-button-invert-bgcolor: var(--primary-button-textcolor);
+	--primary-button-invert-textcolor: var(--primary-button-bgcolor);
+	--primary-button-invert-hover-bgcolor: var(--primary-button-invert-textcolor);
+	--primary-button-invert-hover-textcolor: var(--primary-button-invert-bgcolor);
+	--primary-button-invert-active-bgcolor: var(--primary-button-invert-hover-bgcolor);
+	--primary-button-invert-active-textcolor: var(--primary-button-invert-hover-textcolor);
+	/* form fields */
+	--form-field-bgcolor: var(--color-gray-002);
+	--form-field-bordercolor: var(--color-gray-003);
+	/* navigation */
+	--navbar-height: 40px;
+	--navbar-height-sticky-mobile: 70px;
+	--nav-dropdown-height: 320px;
+	/* component */
+	--component-width: 285px;
+	--border-radius: 4px;
+}
+
+/*
+	* LARGE DESKTOP
+*/
+@media (min-width: 1920px) {
+	:root {
+		/* Typography */
+		--base-font-size: 18px;  
+		--h1-font-size: 2.45rem;
+		--h2-font-size: 1.45rem;
+		--h3-font-size: 1.375rem;
+		--h4-font-size: 1.125rem;
+		--h5-font-size: 1rem;
+		--h6-font-size: 0.8rem;
+		--body-font-size: 1em;
+		--small-font-size: 0.8rem;
+		--tiny-font-size: 0.75rem;
+	}
+}
