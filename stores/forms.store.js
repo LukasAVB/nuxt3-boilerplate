@@ -8,9 +8,17 @@ export const useFormsStore = defineStore('forms', {
 	getters: {
 	},
 	actions: {
-		submitSubscribeForm(payload) {
-			console.log('subscribe:', payload)
-			return true
+		async submitSubscribeForm(payload, url) {
+			return await fetch(url, {
+        method: "POST",
+        body: payload,
+      })
+			.then(() => {
+				return true
+			})
+			.catch(() => {
+				return false
+			})
 		}
 	}
 })

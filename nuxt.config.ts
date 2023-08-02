@@ -11,7 +11,6 @@ export default defineNuxtConfig({
 	runtimeConfig: {
 		public: {
 			base_url: process.env.BASE_URL,
-			prod_url: process.env.PROD_URL,
 			site_title: process.env.SITE_TITLE,
 			site_description: process.env.SITE_DESCRIPTION,
 			site_url: process.env.SITE_URL,
@@ -23,14 +22,9 @@ export default defineNuxtConfig({
 			logo_primary: process.env.LOGO_PRIMARY,
 			logo_secondary: process.env.LOGO_SECONDARY,
 			favicon: process.env.FAVICON,
-			web_components_url: process.env.WEB_COMPONENTS_URL,
-			widget_getter_url: process.env.WIDGET_GETTER_URL,
-			analytics_api_url: process.env.ANALYTICS_API_URL,
-			reference_data_api_url: process.env.REFERENCE_DATA_API_URL,
-			homepage_data_api_url: process.env.HOMEPAGE_DATA_API_URL,
-			user_profile_api_url: process.env.USER_PROFILE_API_URL,
-			suite_web_url: process.env.SUITE_WEB_URL,
-			claim_credit_url: process.env.CLAIM_CREDIT_URL
+			google_form: process.env.GOOGLE_FORM,
+			google_field_email: process.env.GOOGLE_FIELD_EMAIL,
+			recaptcha_key: process.env.RECAPTCHA_KEY,
 		}
 	},
   build: {

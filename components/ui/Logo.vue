@@ -2,6 +2,9 @@
 	<img 
 		:src="src" 
 		:width="width"
+		:style="{
+			maxWidth: maxWidth || width
+		}"
 	/>
 </template>
 
@@ -14,6 +17,10 @@ const props = defineProps({
 		default: 'Primary'
 	},
 	width: {
+		type: String,
+		default: 'auto'
+	},
+	maxWidth: {
 		type: String,
 		default: 'auto'
 	}

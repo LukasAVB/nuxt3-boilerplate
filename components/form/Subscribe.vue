@@ -38,6 +38,7 @@
 <script setup>
 import { useFormsStore } from '@/stores'
 const { submitSubscribeForm } = useFormsStore()
+const config = useRuntimeConfig()
 
 const props = defineProps({
 	title: {
@@ -54,7 +55,14 @@ const payload = ref({
 })
 
 const submit = async () => {
-	const status = await submitSubscribeForm(payload.value)
+	const output = {}
+	
+	Object.keys(payload.value)
+		.forEach((key) => {
+			output[config.public[`google_field_${ key }`]] = payload.value[key] 
+		})
+
+	const status = await submitSubscribeForm(output, config.public.google_form)
 
 	if (status) isSuccess.value = true
 	else isError.value = true

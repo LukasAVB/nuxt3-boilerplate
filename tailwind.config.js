@@ -159,24 +159,12 @@ module.exports = {
 		},
 	},
   variants: {},
-  purge: {
-    // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
-    enabled: false,
-    content: [
-			'./app.vue',
-			'./components/**/*.vue',
-			'./layouts/**/*.vue',
-			'./pages/**/*.vue',
-			'./plugins/**/*.js',
-			'./nuxt.config.js',
-		],
-    options: {
-      safelist: {
-        standard: [/([a-zA-Z0-9\-:_])*/],
-        deep: [/([a-zA-Z0-9\-:_])*/],
-        greedy: [/([a-zA-Z0-9\-:_/])*/],
-      }
-      // Set safelist in nuxt.config.js -> purgeCSS.safelist: ['btn', 'icon']
-    }
-  }
+	content: [
+		'./app.vue',
+		'./components/**/*.vue',
+		'./layouts/**/*.vue',
+		'./pages/**/*.vue',
+		'./plugins/**/*.js',
+		'./nuxt.config.js',
+	]
 }
