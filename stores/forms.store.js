@@ -9,16 +9,18 @@ export const useFormsStore = defineStore('forms', {
 	},
 	actions: {
 		async submitSubscribeForm(payload, url) {
-			return await fetch(url, {
-        method: "POST",
-        body: payload,
-      })
-			.then(() => {
-				return true
-			})
-			.catch(() => {
-				return false
-			})
+			console.log(payload)
+			console.log(url)
+			// return await fetch(url, {
+      //   method: "POST",
+      //   body: payload,
+      // })
+			// .then(() => {
+			// 	return true
+			// })
+			// .catch(() => {
+			// 	return false
+			// })
 		}
 	}
 })
