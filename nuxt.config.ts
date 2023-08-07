@@ -22,9 +22,11 @@ export default defineNuxtConfig({
 			logo_primary: process.env.LOGO_PRIMARY,
 			logo_secondary: process.env.LOGO_SECONDARY,
 			favicon: process.env.FAVICON,
+			google_api_key: process.env.GOOGLE_API_KEY,
 			google_form: process.env.GOOGLE_FORM,
 			google_field_email: process.env.GOOGLE_FIELD_EMAIL,
-			recaptcha_key: process.env.RECAPTCHA_KEY,
+			recaptcha_site_key: process.env.RECAPTCHA_SITE_KEY,
+			recaptcha_secret_key: process.env.RECAPTCHA_SECRET_KEY,
 		}
 	},
   build: {

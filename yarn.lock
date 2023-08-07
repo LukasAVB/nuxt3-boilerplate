@@ -955,6 +955,11 @@
     vite-plugin-checker "^0.6.1"
     vue-bundle-renderer "^1.0.3"
 
+"@nuxtjs/recaptcha@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/recaptcha/-/recaptcha-1.1.2.tgz#ad47e554995cd7ba0b842a12cb670f6e14fe6376"
+  integrity sha512-qr7fyRvywyIvFyl1SgCz/JKOTmFf/O47G560s/t72uhfHsn41s7MR5ObtJFD0AGB2thqFtJwiwrndim2LCJl0g==
+
 "@nuxtjs/tailwindcss@^6.8.0":
   version "6.8.0"
   resolved "https://registry.yarnpkg.com/@nuxtjs/tailwindcss/-/tailwindcss-6.8.0.tgz#14fd9862b1d41912f851624a18bc6d1b5611d504"
