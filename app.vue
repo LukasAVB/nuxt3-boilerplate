@@ -1,6 +1,8 @@
 <template>
-  <div>
-		<NuxtPage />
+  <div class="relative w-full h-full">
+		<main class="w-full h-full">
+			<NuxtPage/>
+		</main>
   </div>
 </template>
 

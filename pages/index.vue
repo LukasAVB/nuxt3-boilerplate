@@ -1,7 +1,7 @@
 <template>
-	<div class="p-x4 flex flex-col gap-x4 items-center">
+	<div class="w-full h-full p-x4 flex flex-col gap-x4 items-center justify-center">
 		<UiLogo 
-			width="50%"
+			width="80%"
 			max-width="280px"
 		/>
 		<p class="text-12px">32 W 39TH STREET</p>
