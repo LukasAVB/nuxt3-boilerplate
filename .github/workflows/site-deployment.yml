@@ -58,3 +58,8 @@ jobs:
 
       - name: Show .env file
         run: cat .env
+
+      - name: Build App
+        run: |
+          yarn
+          yarn generate
