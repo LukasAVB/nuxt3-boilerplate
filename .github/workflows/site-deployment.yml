@@ -4,6 +4,26 @@ on:
   push:
     branches: 
       - dev
+
+env:
+  NODE_VERSION: 16.14.0
+  ## SITE CONFIG
+  BASE_URL: '/'
+  ## SEO
+  SITE_URL: ''
+  SITE_TITLE: 'Off the Clock'
+  SITE_DESCRIPTION: ''
+  OG_IMAGE: ''
+  OG_IMAGE_WIDTH: 1200
+  OG_IMAGE_HEIGHT: 630
+  TWITTER_IMAGE: ''
+  TWITTER_USER: ''
+  ## BRANDING
+  LOGO_PRIMARY: '/img/offtheclock-icon-logo.png'
+  LOGO_SECONDARY: '/img/offtheclock-icon-logo.png'
+  FAVICON: '/img/offtheclock-favicon.png' 
+
+
 jobs:
   deploy:
     runs-on:
@@ -11,5 +31,30 @@ jobs:
       - offtheclock
     
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: Build Application
+        uses: actions/checkout@v3
+        with:
+          node-version: ${env.NODE_VERSION}
+          cache: 'yarn'
+      - run:
+          touch .env
+          echo BASE_URL=${{ env.BASE_URL }} >> .env
+          echo SITE_URL=${{ env.SITE_URL }} >> .env
+          echo SITE_TITLE=${{ env.SITE_TITLE }} >> .env
+          echo SITE_DESCRIPTION=${{ env.SITE_DESCRIPTION }} >> .env
+          echo OG_IMAGE=${{ env.OG_IMAGE }} >> .env
+          echo OG_IMAGE_WIDTH=${{ env.OG_IMAGE_WIDTH }} >> .env
+          echo OG_IMAGE_HEIGHT=${{ env.OG_IMAGE_HEIGHT }} >> .env
+          echo TWITTER_IMAGE=${{ env.TWITTER_IMAGE }} >> .env
+          echo TWITTER_USER=${{ env.TWITTER_USER }} >> .env
+          echo LOGO_PRIMARY=${{ env.LOGO_PRIMARY }} >> .env
+          echo LOGO_SECONDARY=${{ env.LOGO_SECONDARY }} >> .env
+          echo FAVICON=${{ env.FAVICON }} >> .env
+          echo GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }} >> .env
+          echo GOOGLE_SHEET_ID=${{ secrets.GOOGLE_SHEET_ID }} >> .env
+          echo GOOGLE_FORM_ID=${{ secrets.GOOGLE_FORM_ID }} >> .env
+          echo GOOGLE_FIELD_EMAIL=${{ secrets.GOOGLE_FIELD_EMAIL }} >> .env
+          echo RECAPTCHA_SITE_KEY=${{ secrets.RECAPTCHA_SITE_KEY }} >> .env
+          echo RECAPTCHA_SECRET_KEY=${{ secrets.RECAPTCHA_SECRET_KEY }} >> .env
+          yarn
+          yarn generate
