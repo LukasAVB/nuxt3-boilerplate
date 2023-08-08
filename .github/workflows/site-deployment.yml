@@ -38,7 +38,7 @@ jobs:
           cache: 'yarn'
       - run:
           touch .env
-          # echo BASE_URL=${env.BASE_URL} >> .env
+          echo BASE_URL=${env.BASE_URL} >> .env
           # echo SITE_URL=${env.SITE_URL} >> .env
           # echo SITE_TITLE=${env.SITE_TITLE} >> .env
           # echo SITE_DESCRIPTION=${env.SITE_DESCRIPTION} >> .env
