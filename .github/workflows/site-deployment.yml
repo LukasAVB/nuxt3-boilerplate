@@ -79,7 +79,7 @@ jobs:
         run: rm -rf ${{ env.BUILD_DIR }}
       
       - name: Clean up Apache Directory 
-        run: sudo -E rm -rf ${{ env.APACHE_DIR }}
+        run: sudo rm -rf ${{ env.APACHE_DIR }}
 
       - name: Install Dependencies and Build App
         run: |
@@ -88,4 +88,4 @@ jobs:
 
       - name: Create Symbolic Link to Apache Directory
         run: |
-          sudo -E ln -s $BUILD_DIR $APACHE_DIR || exit 1
+          sudo ln -s $BUILD_DIR $APACHE_DIR || exit 1
