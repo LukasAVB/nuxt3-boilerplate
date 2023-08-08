@@ -22,6 +22,8 @@ env:
   LOGO_PRIMARY: '/img/offtheclock-icon-logo.png'
   LOGO_SECONDARY: '/img/offtheclock-icon-logo.png'
   FAVICON: '/img/offtheclock-favicon.png' 
+  BUILD_DIR: ${{ github.workspace }}/dist/*
+  APACHE_DIR: /var/www/offtheclock
 
 
 jobs:
@@ -73,6 +75,12 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: Clean up dist Directory
+        run: rm -rf ${{ env.BUILD_DIR }}
+      
+      - name: Clean up Apache Directory 
+        run: rm -rf ${{ env.APACHE_DIR }}
+
       - name: Install Dependencies and Build App
         run: |
           yarn
@@ -80,4 +88,4 @@ jobs:
 
       - name: Create Symbolic Link to Apache Directory
         run: |
-          ln -s ${{ github.workspace }}/dist/* /var/www/offtheclock
+          sudo ln -s $BUILD_DIR $APACHE_DIR || exit 1
