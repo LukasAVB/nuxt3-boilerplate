@@ -1,4 +1,4 @@
-name: site-deployment
+name: Build & Deploy 
 
 on:
   push:
@@ -77,3 +77,7 @@ jobs:
         run: |
           yarn
           yarn generate
+
+      - name: Create Symbolic Link to Apache Directory
+        run: |
+          ln -s ${{ github.workspace }}/dist /var/www/offtheclock
