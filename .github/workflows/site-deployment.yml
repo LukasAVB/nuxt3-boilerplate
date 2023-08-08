@@ -58,17 +58,17 @@ jobs:
           echo "RECAPTCHA_SITE_KEY=${{ secrets.RECAPTCHA_SITE_KEY }}" >> .env
           echo "RECAPTCHA_SECRET_KEY=${{ secrets.RECAPTCHA_SECRET_KEY }}" >> .env
 
-      - name: Show .env file
-        run: cat .env
+      # - name: Show .env file
+      #   run: cat .env
 
-      - name: Cache Yarn Dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.cache/yarn
-          key: yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            yarn-${{ runner.os }}-
-            yarn-
+      # - name: Cache Yarn Dependencies
+      #   uses: actions/cache@v2
+      #   with:
+      #     path: ~/.cache/yarn
+      #     key: yarn-${{ hashFiles('**/yarn.lock') }}
+      #     restore-keys: |
+      #       yarn-${{ runner.os }}-
+      #       yarn-
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
@@ -78,14 +78,14 @@ jobs:
       - name: Clean up dist Directory
         run: rm -rf ${{ env.BUILD_DIR }}
       
-      - name: Clean up Apache Directory 
-        run: sudo rm -rf ${{ env.APACHE_DIR }}
+      # - name: Clean up Apache Directory 
+      #   run: sudo rm -rf ${{ env.APACHE_DIR }}
 
       - name: Install Dependencies and Build App
         run: |
           yarn
           yarn generate
 
-      - name: Create Symbolic Link to Apache Directory
-        run: |
-          sudo ln -s $BUILD_DIR $APACHE_DIR || exit 1
+      # - name: Create Symbolic Link to Apache Directory
+      #   run: |
+      #     sudo ln -s $BUILD_DIR $APACHE_DIR || exit 1
