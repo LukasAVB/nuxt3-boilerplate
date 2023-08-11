@@ -78,14 +78,14 @@ jobs:
       - name: Clean up dist Directory
         run: rm -rf ${{ env.BUILD_DIR }}
       
-      # - name: Clean up Apache Directory 
-      #   run: sudo rm -rf ${{ env.APACHE_DIR }}
+      - name: Clean up Apache Directory 
+        run: sudo rm -rf ${{ env.APACHE_DIR }}
 
       - name: Install Dependencies and Build App
         run: |
           yarn
           yarn generate
 
-      # - name: Create Symbolic Link to Apache Directory
-      #   run: |
-      #     sudo ln -s $BUILD_DIR $APACHE_DIR || exit 1
+      - name: Create Symbolic Link to Apache Directory
+        run: |
+          sudo ln -s $BUILD_DIR $APACHE_DIR || exit 1
