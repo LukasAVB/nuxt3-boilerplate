@@ -79,7 +79,7 @@ jobs:
         run: rm -rf ${{ env.BUILD_DIR }}
       
       - name: Clean up Apache Directory 
-        run: sudo rm -rf ${{ env.APACHE_DIR }}
+        run: sudo rm -rf ${{ env.APACHE_DIR }}/*
 
       - name: Install Dependencies and Build App
         run: |
