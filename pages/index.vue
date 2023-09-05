@@ -1,6 +1,6 @@
 <template>
 	<div class="w-full h-full">
-		PROJECT
+		NUXT 3 BOILERPLATE
 	</div>
 </template>
 
