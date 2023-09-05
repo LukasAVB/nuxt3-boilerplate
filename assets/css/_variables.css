@@ -21,7 +21,7 @@
 	--breakpoint-tv: 1920px;
 
 	/* Typography */
-	--primary-font-family: 'Jost', Helvetica, Arial, sans-serif;
+	--primary-font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 	--font-family: var(--primary-font-family);
 
 	--base-font-size: 16px; 
@@ -48,12 +48,12 @@
 	--body-font-size: 1em;
 	--body-line-height: 1.25;
 	--body-font-weight: 400;
+	--label-font-size: 0.675rem;
+	--label-line-height: 1.25;
+	--label-font-weight: 400;
 	--small-font-size: 0.8rem;
 	--small-line-height: 1.25;
 	--small-font-weight: 400;
-	--tiny-font-size: 0.675rem;
-	--tiny-line-height: 1.25;
-	--tiny-font-weight: 400;
 
 	/* Spacing */
 	--gap: 10px;
@@ -65,13 +65,13 @@
 	/* shadows */
 	--shadow: 1px 1px 4px #00000029;
 	/* background */
-	--primary-bgcolor: var(--color-black);
-	--secondary-bgcolor: var(--color-black);
+	--primary-bgcolor: var(--color-white);
+	--secondary-bgcolor: var(--color-white);
 	--tertiary-bgcolor: var(--color-gray-001);
 	--placeholder-bgcolor: var(--color-gray-003);
 	/* text */
-	--primary-textcolor: var(--color-white);
-	--secondary-textcolor: var(--color-white);
+	--primary-textcolor: var(--color-black);
+	--secondary-textcolor: var(--color-black);
 	--tertiary-textcolor: var(--color-gray-005);
 	/* border */
 	--primary-bordercolor: var(--color-gray-004);
@@ -117,7 +117,7 @@
 		--h5-font-size: 1rem;
 		--h6-font-size: 0.8rem;
 		--body-font-size: 1em;
+		--label-font-size: 0.75rem;
 		--small-font-size: 0.8rem;
-		--tiny-font-size: 0.75rem;
 	}
 }
