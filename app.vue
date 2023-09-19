@@ -1,13 +1,21 @@
 <template>
-  <div class="relative w-full h-full">
-		<main class="w-full h-full">
-			<NuxtPage/>
-		</main>
+  <div 
+		id="app" 
+		class="relative w-full h-full"
+	>
+		<NuxtLayout>
+			<NuxtPage />
+		</NuxtLayout>
   </div>
 </template>
 
 <script setup>
 import '@/assets/css/main.css'
+
+import { storeToRefs } from 'pinia'
+import { useGeneralStore } from '@/stores'
+
+const { theme } = storeToRefs(useGeneralStore())
 
 const config = useRuntimeConfig()
 

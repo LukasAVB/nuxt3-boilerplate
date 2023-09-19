@@ -9,6 +9,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@hypernym/nuxt-gsap": "^2.4.1",
     "@iconify-json/carbon": "^1.1.18",
     "@iconify-json/mdi": "^1.1.53",
     "@nuxt/devtools": "latest",
@@ -21,7 +22,7 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
-    "gsap": "^3.12.2",
+    "click-outside-vue3": "^4.0.1",
     "icons": "^1.0.0",
     "pinia": "^2.1.6"
   }
