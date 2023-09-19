@@ -1,5 +1,5 @@
 {
-  "name": "lukasavb.com",
+  "name": "nuxt3-boilerplate",
   "private": true,
   "scripts": {
     "build": "nuxt build",
