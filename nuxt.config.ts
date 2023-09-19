@@ -25,6 +25,9 @@ export default defineNuxtConfig({
 		}
 	},
   build: {
+		transpile: [
+			'gsap'
+		],
     postcss: {
       postcssOptions: {
         plugins: {
@@ -37,7 +40,14 @@ export default defineNuxtConfig({
 	modules: [
 		'@nuxtjs/tailwindcss',
 		'@pinia/nuxt',
+		'@hypernym/nuxt-gsap'
 	],
 	buildModules: [
 	],
+  gsap: {
+    extraPlugins: {
+      scrollTrigger: true,
+			scrollTo: true
+    }
+  }
 })
